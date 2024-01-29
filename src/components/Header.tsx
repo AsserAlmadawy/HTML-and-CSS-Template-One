@@ -20,10 +20,18 @@ const Header: React.FC = () => {
     </div>
     <div className="header-menu" ref={menuRef} onMouseOver={() => menuRef.current!.style.display = "block"} onMouseLeave={() => menuRef.current!.style.display = "none"}>
       <ul>
-        <li>Services</li>
-        <li>Portfolio</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+          <p>Services</p>
+        </li>
+        <li>
+          <p>Portfolio</p>
+        </li>
+        <li>
+          <p>About</p>
+        </li>
+        <li>
+          <p>Contact</p>
+        </li>
       </ul>
     </div>
   </div>
