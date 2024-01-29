@@ -1,7 +1,10 @@
 import React from "react";
+import "@/styles/Intro.css";
 
-const Intro: React.FC = () => {
-  return <div>About</div>;
-};
+interface IntroProps {
+  children: React.ReactNode;
+}
+
+const Intro: React.FC<IntroProps> = props => <div className="intro">{props.children}</div>;
 
 export default Intro;
