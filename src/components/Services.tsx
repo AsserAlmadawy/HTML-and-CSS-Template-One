@@ -1,7 +1,7 @@
 import React from "react";
 
-const Footer: React.FC = () => {
+const Services: React.FC = () => {
   return <div>About</div>;
 };
 
-export default Footer;
+export default Services;
