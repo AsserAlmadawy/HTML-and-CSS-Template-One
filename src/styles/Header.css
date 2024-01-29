@@ -59,6 +59,8 @@
         height: 25px;
         z-index: 1;
         background-color: #fff;
+        cursor: pointer;
+        transition: 0.5s;
 
         &:hover {
           transform: translateX(15px);
@@ -67,7 +69,7 @@
     }
   }
 
-  &:has(.header-lines:hover) .header-menu {
-    display: block;
+  &:has(.header-menu:hover) .header-lines .line.two {
+    width: 32px;
   }
 }
