@@ -1,7 +1,9 @@
 import React from "react";
 
-const Services: React.FC = () => {
-  return <div>About</div>;
-};
+interface ServicesProps {
+  children: React.ReactNode;
+}
 
-export default Services;
+const Services: React.FC<ServicesProps> = props => <div className="services">{props.children}</div>;
+
+export default Services;                       
