@@ -1,0 +1,10 @@
+.light-text {
+  font-weight: bold;
+  font-size: 100px;
+  opacity: 0.5;
+}
+
+.black-text {
+  font-size: 50px;
+  z-index: 1;
+}
