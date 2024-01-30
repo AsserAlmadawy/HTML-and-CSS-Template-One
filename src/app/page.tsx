@@ -1,3 +1,5 @@
+"use client";
+
 import About from "@/components/About";
 import Background from "@/components/Background";
 import Contact from "@/components/Contact";
@@ -22,6 +24,7 @@ import PortfolioPart from "@/components/PortfolioPart";
 import type { IntroPartProps } from "@/components/IntroPart";
 import type { ServiceProps } from "@/components/Service";
 import type { PortfolioPartProps } from "@/components/PortfolioPart";
+import { useEffect } from "react";
 
 const Home: React.FC = () => {
   const intros: IntroPartProps[] = [
@@ -107,6 +110,13 @@ const Home: React.FC = () => {
       }
     }
   ];
+
+  useEffect(() => {
+    document.querySelectorAll("ul li")[0]!.addEventListener("click", () => document.querySelector(".services-container")!.scrollIntoView({ behavior: "smooth" }));
+    document.querySelectorAll("ul li")[1]!.addEventListener("click", () => document.querySelector(".portfolio-container")!.scrollIntoView({ behavior: "smooth" }));
+    document.querySelectorAll("ul li")[2]!.addEventListener("click", () => document.querySelector(".about-container")!.scrollIntoView({ behavior: "smooth" }));
+    document.querySelectorAll("ul li")[3]!.addEventListener("click", () => document.querySelector(".contact")!.scrollIntoView({ behavior: "smooth" }));
+  }, []);
 
   return (
     <>
