@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Intro from "@/components/Intro";
 import IntroPart from "@/components/IntroPart";
-// import Portfolio from "@/components/Portfolio";
+import Portfolio from "@/components/Portfolio";
 import Services from "@/components/Services";
 import magicIcon from "@/assets/icons/magic.svg";
 import gemIcon from "@/assets/icons/gem.svg";
@@ -15,6 +15,10 @@ import vectorSquareIcon from "@/assets/icons/vector-square.svg";
 import filledGemIcon from "@/assets/icons/filled-gem.svg";
 import pencilRulerIcon from "@/assets/icons/pencil-ruler.svg";
 import Service from "@/components/Service";
+import portfolioOneImage from "@/assets/images/portfolio-1.jpg";
+import portfolioTwoImage from "@/assets/images/portfolio-2.jpg";
+import portfolioThreeImage from "@/assets/images/portfolio-3.jpg";
+import PortfolioPart from "@/components/PortfolioPart";
 
 const Home: React.FC = () => {
   const intros = [
@@ -80,6 +84,27 @@ const Home: React.FC = () => {
     }
   ];
 
+  const portfolios = [
+    {
+      image: {
+        source: portfolioOneImage,
+        alt: "Portfolio 1"
+      }
+    },
+    {
+      image: {
+        source: portfolioTwoImage,
+        alt: "Portfolio 2"
+      }
+    },
+    {
+      image: {
+        source: portfolioThreeImage,
+        alt: "Portfolio 3"
+      }
+    }
+  ];
+
   return (
     <div>
       <Header />
@@ -90,8 +115,10 @@ const Home: React.FC = () => {
       <Services>
         {services.map(service => <Service icon={{ source: service.icon.source, alt: service.icon.alt }} title={service.title} description={service.description} className={service.className} key={service.title} />)}
       </Services>
+      <Portfolio>
+        {portfolios.map(portfolio => <PortfolioPart image={{ source: portfolio.image.source, alt: portfolio.image.alt }} key={portfolio.image.alt} />)}
+      </Portfolio>
       {/*
-      <Portfolio />
       <About />
       <Contact />
       <Footer /> */}

@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "@/models/icon";
+import type { Image as Icon } from "@/models/image";
 import Image from "next/image";
 import "@/styles/IntroPart.css";
 

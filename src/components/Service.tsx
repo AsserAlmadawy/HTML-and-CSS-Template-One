@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Icon from "@/models/icon";
+import type { Image as Icon } from "@/models/image";
 import "@/styles/Service.css";
 
 interface ServiceProps {

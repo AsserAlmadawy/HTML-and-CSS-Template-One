@@ -1,7 +1,16 @@
 import React from "react";
+import SectionTitle from "./SectionTitle";
+import "@/styles/Portfolio.css";
 
-const Portfolio: React.FC = () => {
-  return <div>About</div>;
-};
+interface PortfolioProps {
+  children: React.ReactNode;
+}
+
+const Portfolio: React.FC<PortfolioProps> = props => (
+  <div className="portfolio-container">
+    <SectionTitle lightText="Portfolio" blackText="If you do it right, it will last forever." />
+    <div className="portfolio">{props.children}</div>
+  </div>
+);
 
 export default Portfolio;
