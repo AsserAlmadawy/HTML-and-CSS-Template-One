@@ -122,8 +122,8 @@ const Home: React.FC = () => {
         {portfolios.map((portfolio: PortfolioPartProps) => <PortfolioPart image={{ source: portfolio.image.source, alt: portfolio.image.alt }} key={portfolio.image.alt} />)}
       </Portfolio>
       <About />
-      {/*
       <Contact />
+      {/*
       <Footer /> */}
     </>
   );
