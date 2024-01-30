@@ -2,6 +2,8 @@
   display: flex;
 
   .about-image-container {
+    height: 450px;
+
     .about-image {
       width: 250px;
       height: 400px;
@@ -37,6 +39,7 @@
 
   .about-text {
     transform: translateY(150px) translateX(200px);
+    height: 250px;
 
     p {
       text-wrap: balance;

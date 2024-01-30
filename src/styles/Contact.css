@@ -1,6 +1,5 @@
 .contact {
   text-align: center;
-  transform: translateY(-1250px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,11 +24,13 @@
 
       &.social-networks {
         display: flex;
+        transform: translateX(50px);
 
         .icon {
           width: 25px;
           height: 25px;
           margin-left: 10px;
+          transform: translateY(-5px);
         }
       }
     }

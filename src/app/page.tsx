@@ -123,8 +123,7 @@ const Home: React.FC = () => {
       </Portfolio>
       <About />
       <Contact />
-      {/*
-      <Footer /> */}
+      <Footer />
     </>
   );
 };
