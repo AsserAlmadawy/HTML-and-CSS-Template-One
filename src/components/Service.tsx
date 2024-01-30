@@ -1,7 +1,21 @@
 import React from "react";
+import Image from "next/image";
+import Icon from "@/models/icon";
+import "@/styles/Service.css";
 
-const Service: React.FC = () => {
-  return <div>Service</div>;
-};
+interface ServiceProps {
+  icon: Icon;
+  title: string;
+  description: string;
+  className: string;
+}
+
+const Service: React.FC<ServiceProps> = props => (
+  <div className={`service ${props.className}`}>
+    <Image src={props.icon.source} alt={props.icon.alt} className="service-icon" />
+    <div className="service-title">{props.title}</div>
+    <div className="service-description">{props.description}</div>
+  </div>
+);
 
 export default Service;

@@ -1,10 +1,14 @@
 .light-text {
   font-weight: bold;
-  font-size: 100px;
-  opacity: 0.5;
+  font-size: 75px;
+  opacity: 0.1;
+  transform: translateY(50px);
+  text-align: center;
 }
 
 .black-text {
-  font-size: 50px;
-  z-index: 1;
+  font-size: 15pt;
+  opacity: 0.5;
+  transform: translateY(25px);
+  text-align: center;
 }
