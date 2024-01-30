@@ -8,7 +8,7 @@ interface ServicesProps {
   children: React.ReactNode;
 }
 
-const Services: React.FC<ServicesProps> = (props) => (
+const Services: React.FC<ServicesProps> = (props: ServicesProps) => (
   <div className="services-container">
     <SectionTitle lightText="Services" blackText="Don't be busy, be productive." />
     <div className="services-content">

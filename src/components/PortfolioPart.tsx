@@ -7,7 +7,7 @@ interface PortfolioPartProps {
   image: ImageType;
 }
 
-const PortfolioPart: React.FC<PortfolioPartProps> = props => (
+const PortfolioPart: React.FC<PortfolioPartProps> = (props: PortfolioPartProps) => (
   <div className="portfolio-part">
     <Image src={props.image.source} alt={props.image.alt} className="portfolio-image" />
     <div className="portfolio-title">Project here</div>
@@ -19,3 +19,4 @@ const PortfolioPart: React.FC<PortfolioPartProps> = props => (
 );
 
 export default PortfolioPart;
+export type { PortfolioPartProps };

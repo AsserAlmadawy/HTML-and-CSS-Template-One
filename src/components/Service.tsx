@@ -10,7 +10,7 @@ interface ServiceProps {
   className: string;
 }
 
-const Service: React.FC<ServiceProps> = props => (
+const Service: React.FC<ServiceProps> = (props: ServiceProps) => (
   <div className={`service ${props.className}`}>
     <Image src={props.icon.source} alt={props.icon.alt} className="service-icon" />
     <div className="service-title">{props.title}</div>
@@ -19,3 +19,4 @@ const Service: React.FC<ServiceProps> = props => (
 );
 
 export default Service;
+export type { ServiceProps };

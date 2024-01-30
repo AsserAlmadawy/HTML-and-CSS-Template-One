@@ -19,9 +19,12 @@ import portfolioOneImage from "@/assets/images/portfolio-1.jpg";
 import portfolioTwoImage from "@/assets/images/portfolio-2.jpg";
 import portfolioThreeImage from "@/assets/images/portfolio-3.jpg";
 import PortfolioPart from "@/components/PortfolioPart";
+import type { IntroPartProps } from "@/components/IntroPart";
+import type { ServiceProps } from "@/components/Service";
+import type { PortfolioPartProps } from "@/components/PortfolioPart";
 
 const Home: React.FC = () => {
-  const intros = [
+  const intros: IntroPartProps[] = [
     {
       icon: {
         source: magicIcon,
@@ -45,7 +48,7 @@ const Home: React.FC = () => {
     }
   ];
 
-  const services = [
+  const services: ServiceProps[] = [
     {
       icon: {
         source: paletteIcon,
@@ -84,7 +87,7 @@ const Home: React.FC = () => {
     }
   ];
 
-  const portfolios = [
+  const portfolios: PortfolioPartProps[] = [
     {
       image: {
         source: portfolioOneImage,
@@ -106,23 +109,23 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div>
+    <>
       <Header />
       <Background />
       <Intro>
-        {intros.map(intro => <IntroPart icon={{ source: intro.icon.source, alt: intro.icon.alt }} title={intro.title} key={intro.title} />)}
+        {intros.map((intro: IntroPartProps) => <IntroPart icon={{ source: intro.icon.source, alt: intro.icon.alt }} title={intro.title} key={intro.title} />)}
       </Intro>
       <Services>
-        {services.map(service => <Service icon={{ source: service.icon.source, alt: service.icon.alt }} title={service.title} description={service.description} className={service.className} key={service.title} />)}
+        {services.map((service: ServiceProps) => <Service icon={{ source: service.icon.source, alt: service.icon.alt }} title={service.title} description={service.description} className={service.className} key={service.title} />)}
       </Services>
       <Portfolio>
-        {portfolios.map(portfolio => <PortfolioPart image={{ source: portfolio.image.source, alt: portfolio.image.alt }} key={portfolio.image.alt} />)}
+        {portfolios.map((portfolio: PortfolioPartProps) => <PortfolioPart image={{ source: portfolio.image.source, alt: portfolio.image.alt }} key={portfolio.image.alt} />)}
       </Portfolio>
-      {/*
       <About />
+      {/*
       <Contact />
       <Footer /> */}
-    </div>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ import logo from "@/assets/images/logo.png";
 import "@/styles/Header.css";
 
 const Header: React.FC = () => {
-  const menuRef = useRef<HTMLDivElement>(null);
+  const menuRef: React.RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 
   return (
   <div className="header">

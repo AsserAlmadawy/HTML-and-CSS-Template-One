@@ -5,6 +5,6 @@ interface IntroProps {
   children: React.ReactNode;
 }
 
-const Intro: React.FC<IntroProps> = props => <div className="intro">{props.children}</div>;
+const Intro: React.FC<IntroProps> = (props: IntroProps) => <div className="intro">{props.children}</div>;
 
 export default Intro;

@@ -8,7 +8,7 @@ interface IntroPartProps {
   title: string;
 }
 
-const IntroPart: React.FC<IntroPartProps> = (props) => (
+const IntroPart: React.FC<IntroPartProps> = (props: IntroPartProps) => (
   <div className="intro-part">
     <Image src={props.icon.source} alt={props.icon.alt} className="intro-icon" />
     <div className="intro-title">{props.title}</div>
@@ -20,3 +20,4 @@ const IntroPart: React.FC<IntroPartProps> = (props) => (
 );
 
 export default IntroPart;
+export type { IntroPartProps };

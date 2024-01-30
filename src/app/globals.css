@@ -27,4 +27,5 @@ body {
   overflow-x: hidden;
   -webkit-user-select: none;
   user-select: none;
+  scroll-padding-top: 50px;
 }

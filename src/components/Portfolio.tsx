@@ -6,7 +6,7 @@ interface PortfolioProps {
   children: React.ReactNode;
 }
 
-const Portfolio: React.FC<PortfolioProps> = props => (
+const Portfolio: React.FC<PortfolioProps> = (props: PortfolioProps) => (
   <div className="portfolio-container">
     <SectionTitle lightText="Portfolio" blackText="If you do it right, it will last forever." />
     <div className="portfolio">{props.children}</div>
