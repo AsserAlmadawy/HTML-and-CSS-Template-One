@@ -1,0 +1,21 @@
+.background {
+  background-image: url(../assets/images/landing.jpg);
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 500px;
+  transform: translateX(-10px) translateY(40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: 100% 100%;
+
+  h1 {
+    font-size: 50px;
+    color: rgb(16, 202, 183);
+  }
+
+  .background-sentence {
+    font-size: 15pt;
+  }
+}

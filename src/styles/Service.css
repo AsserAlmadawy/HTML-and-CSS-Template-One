@@ -1,0 +1,35 @@
+.service {
+  margin: 25px;
+
+  &.graphic-design {
+    grid-area: "graphic-design";
+  }
+
+  &.web-design {
+    grid-area: "web-design";
+  }
+
+  &.ui-ux {
+    grid-area: "ui-ux";
+  }
+
+  &.web-development {
+    grid-area: "web-development";
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-title {
+    font-weight: bold;
+    transform: translateX(65px) translateY(-40px);
+  }
+
+  .service-description {
+    text-wrap: balance;
+    transform: translateX(65px);
+    opacity: 0.6;
+  }
+}
