@@ -1,0 +1,4 @@
+.intro {
+  display: flex;
+  transform: translateY(50px);
+}

@@ -1,0 +1,85 @@
+.header {
+  width: 100vw;
+  height: 50px;
+  transform: translateX(-10px);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+
+  .header-image .logo {
+    width: 60px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    left: 97px;
+  }
+
+  .header-lines {
+    position: absolute;
+    right: 130px;
+    top: 17px;
+    width: 32px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &:hover .line.two {
+      width: 32px;
+    }
+
+    .line {
+      margin-bottom: 4.5px;
+      background-color: #000;
+      height: 2px;
+
+      &:not(.two) {
+        width: 32px;
+      }
+
+      &.two {
+        width: 20px;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+
+  .header-menu {
+    position: absolute;
+    right: 125px;
+    top: 30px;
+    display: none;
+    transition: 1s;
+
+    ul {
+      list-style: none;
+
+      li {
+        border-bottom: 1px solid rgb(221, 221, 221);
+        width: 200px;
+        height: 45px;
+        z-index: 1;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover p {
+          transform: translateX(15px);
+        }
+
+        p {
+          transition: 0.5s;
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+
+  &:has(.header-menu:hover) .header-lines .line.two {
+    width: 32px;
+  }
+}
